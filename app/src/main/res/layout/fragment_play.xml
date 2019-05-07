@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:id="@+id/vertical_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="-5dp"
+        android:paddingRight="-5dp" />
+
+    <TextView
+        android:id="@+id/player_tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:drawableLeft="@mipmap/btn_back_shaddowed"
+        android:drawablePadding="5dp"
+        android:drawableStart="@mipmap/btn_back_shaddowed"
+        android:textColor="@color/colorTransparentGray" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_pause"
+        android:visibility="invisible" />
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imgBtn_follow_shot"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:background="#00ffffff"-->
+    <!--android:src="@drawable/btn_follow_shot" />-->
+
+</RelativeLayout>

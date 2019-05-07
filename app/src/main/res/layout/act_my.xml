@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageView
+                android:id="@+id/iv_heap_bg"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/ic_my_top_bg" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_head_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="115dp"
+                android:src="@mipmap/face"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_width="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_heap_bg" />
+
+            <TextView
+                android:id="@+id/tv_my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/civ_head_pic"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="16dp"
+                android:text="昵称"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_my_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/civ_head_pic"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/tv_my_name"
+                android:text="ID号："
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_my_name"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="16dp"
+                android:text="粉丝"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_follows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_my_name"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/tv_fans"
+                android:text="关注"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@mipmap/btn_back_no_shaddow" />
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tb_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/edit_yellow"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@color/colorGray4" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+    <!--android:id="@+id/civ_head_pic"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginTop="115dp"-->
+    <!--android:src="@mipmap/face"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="@id/iv_heap_bg"-->
+    <!--app:roundAsCircle="true"-->
+    <!--fresco:roundingBorderColor="@android:color/black"-->
+    <!--fresco:roundingBorderWidth="2dp" />-->
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+
+
+</android.support.design.widget.CoordinatorLayout>
