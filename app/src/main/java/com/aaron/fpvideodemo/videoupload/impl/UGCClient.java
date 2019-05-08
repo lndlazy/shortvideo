@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.aaron.fpvideodemo.common.Constant;
 import com.orhanobut.logger.Logger;
 
 import org.json.JSONException;
@@ -65,16 +64,16 @@ public class UGCClient {
      */
     public int initUploadUGC(TVCUploadInfo info, String customKey, String vodSessionKey, Callback callback) {
         String reqUrl = SERVER + "ApplyUploadUGC";
-//        String reqUrl = Constant.APP_URL + "upload_ugc";
+//        String reqUrl = VideoConstant.APP_URL + "upload_ugc";
 //        Log.d(TAG, "initUploadUGC->request url:" + reqUrl);
 
         String body = "";
         try {
             JSONObject jsonObject = new JSONObject();
-//            jsonObject.put("token", Constant.token);
-//            jsonObject.put("userId", Constant.userId);
-//            jsonObject.put("userName", Constant.userName);
-//            jsonObject.put("userImg", Constant.userImg);
+//            jsonObject.put("token", VideoConstant.token);
+//            jsonObject.put("userId", VideoConstant.userId);
+//            jsonObject.put("userName", VideoConstant.userName);
+//            jsonObject.put("userImg", VideoConstant.userImg);
 
             jsonObject.put("signature", signature);
             jsonObject.put("videoName", info.getFileName());

@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -39,7 +39,7 @@ public class VideoUtil {
 
     //TODO
     public static Context getContext(){
-        return MApplication.getApplication();
+        return MyApplication.getApplication();
     }
 
     public VideoUtil() {

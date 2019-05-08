@@ -18,10 +18,10 @@ import retrofit2.http.POST;
  */
 public interface ApiService {
 
-        String APP_URL_NORMAL = "http://47.96.250.148:8110" + "/v1" + "/api";
-//    String APP_URL_NORMAL = "http://app1.culturedc.cn/api" + "/v1" + "/encrypt";
-    //    String APP_URL = "http://47.96.250.148:8110" + "/v1" + "/api/";
-    String APP_URL = "http://app1.culturedc.cn/api" + "/v1" + "/encrypt/";
+    String APP_URL_NORMAL = "http://47.96.250.148:8110" + "/v1" + "/api";
+    //    String APP_URL_NORMAL = "http://app1.culturedc.cn/api" + "/v1" + "/encrypt";
+        String APP_URL = "http://47.96.250.148:8110" + "/v1" + "/api/";
+//    String APP_URL = "http://app1.culturedc.cn/api" + "/v1" + "/encrypt/";
 
 
     //我的作品列表

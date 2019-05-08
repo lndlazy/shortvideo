@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.aaron.fpvideodemo.R;
 import com.aaron.fpvideodemo.common.utils.TCUtils;
-import com.aaron.fpvideodemo.mainui.MainActivity;
+import com.aaron.fpvideodemo.mainui.ShortVideoMainActivity;
 
 import org.json.JSONObject;
 
@@ -162,7 +162,7 @@ public class LoginActivity extends Activity {
      * 登录成功后被调用，跳转至TCMainActivity
      */
     private void jumpToHomeActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ShortVideoMainActivity.class);
         startActivity(intent);
         finish();
     }

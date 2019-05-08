@@ -2,11 +2,8 @@ package com.aaron.fpvideodemo.mainui.search;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,7 +13,7 @@ import android.view.ViewGroup;
 import com.aaron.fpvideodemo.R;
 import com.aaron.fpvideodemo.base.Basebean;
 import com.aaron.fpvideodemo.base.IBaseFragment;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.mainui.search.adapter.UserAdapter;
 import com.aaron.fpvideodemo.mainui.search.bean.UserEntry;
 import com.aaron.fpvideodemo.my.like.ILikeEntry;
@@ -100,7 +97,7 @@ public class UserFragment extends IBaseFragment implements ILikeView{
 
             }
 
-        }, Constant.userId, page, Constant.PIGE_SIZE, keyWord);
+        }, VideoConstant.userId, page, VideoConstant.PIGE_SIZE, keyWord);
 
     }
 

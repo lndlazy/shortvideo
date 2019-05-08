@@ -45,7 +45,7 @@ import android.widget.TextView;
 
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -660,7 +660,7 @@ public class TCUtils {
                 if (!checkPermission(context, Manifest.permission.SYSTEM_ALERT_WINDOW)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.NormalDialog);
                     builder.setTitle(context.getString(R.string.float_window_not_allow));
-                    builder.setPositiveButton(MApplication.getApplication().getResources().getString(R.string.tc_utils_check_float_window_permission_yes),
+                    builder.setPositiveButton(MyApplication.getApplication().getResources().getString(R.string.tc_utils_check_float_window_permission_yes),
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -675,7 +675,7 @@ public class TCUtils {
                                     context.startActivity(intent);
                                 }
                             });
-                    builder.setNegativeButton(MApplication.getApplication().getResources().getString(R.string.tc_utils_check_float_window_permission_no),
+                    builder.setNegativeButton(MyApplication.getApplication().getResources().getString(R.string.tc_utils_check_float_window_permission_no),
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {

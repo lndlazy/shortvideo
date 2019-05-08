@@ -1,7 +1,6 @@
 package com.aaron.fpvideodemo.mainui.hot;
 
-import com.aaron.fpvideodemo.base.Basebean;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.mainui.list.VideoListEntry;
 import com.aaron.fpvideodemo.net.BaseNoTObserver;
 import com.aaron.fpvideodemo.net.RetrofitHttpUtil;
@@ -40,7 +39,7 @@ public class IHotPresenter {
                 iHotView.showErr("数据加载失败");
             }
 
-        }, 2, page, Constant.PIGE_SIZE, keyWord);
+        }, 2, page, VideoConstant.PIGE_SIZE, keyWord);
 
     }
 

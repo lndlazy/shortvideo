@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.base.MyApplication;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.utils.TCUtils;
 import com.aaron.fpvideodemo.net.ApiService;
@@ -324,8 +324,8 @@ public class TCUserMgr {
     public void getVodSig(final Callback callback) {
         try {
             JSONObject body = new JSONObject();
-            body.put("token", Constant.token);
-            body.put("userId", Constant.userId);
+            body.put("token", VideoConstant.token);
+            body.put("userId", VideoConstant.userId);
             request("/get_vod_sign", body, new HttpCallback("get_vod_sign", callback));
         } catch (Exception e) {
             e.printStackTrace();
@@ -420,7 +420,7 @@ public class TCUserMgr {
 ////            String sig = getRequestSig(body);
 //
 //            Request request = new Request.Builder()
-//                    .url(Constant.APP_URL + cmd)
+//                    .url(VideoConstant.APP_URL + cmd)
 ////                    .addHeader("Liteav-Sig", sig)
 //                    .post(RequestBody.create(MediaType.parse("application/x-www-form-urlencoded; charset=utf-8"), body.toString()))
 ////                    .post(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), body.toString()))
@@ -526,9 +526,9 @@ public class TCUserMgr {
                     if (callback != null) {
                         String errorMsg = msg;
                         if (code == 620) {
-                            errorMsg = MApplication.getApplication().getResources().getString(R.string.tc_user_mgr_user_does_not_exist);
+                            errorMsg = MyApplication.getApplication().getResources().getString(R.string.tc_user_mgr_user_does_not_exist);
                         } else if (code == 621) {
-                            errorMsg = MApplication.getApplication().getResources().getString(R.string.tc_user_mgr_wrong_password);
+                            errorMsg = MyApplication.getApplication().getResources().getString(R.string.tc_user_mgr_wrong_password);
                         }
                         callback.onFailure(code, errorMsg);
                     }

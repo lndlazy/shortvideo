@@ -20,12 +20,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.common.activity.TCBaseActivity;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.utils.TCUtils;
 import com.aaron.fpvideodemo.login.TCUserMgr;
-import com.aaron.fpvideodemo.mainui.MainActivity;
+import com.aaron.fpvideodemo.mainui.ShortVideoMainActivity;
 import com.aaron.fpvideodemo.videoupload.TXUGCPublish;
 import com.aaron.fpvideodemo.videoupload.TXUGCPublishTypeDef;
 import com.bumptech.glide.Glide;
@@ -157,7 +157,7 @@ public class TCVideoPublisherActivity extends TCBaseActivity implements View.OnC
                 back();
                 break;
             case R.id.layout_publish_success:
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, ShortVideoMainActivity.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -190,7 +190,7 @@ public class TCVideoPublisherActivity extends TCBaseActivity implements View.OnC
 
     private void publishVideo() {
         if (mAllDone) {
-            Intent intent = new Intent(TCVideoPublisherActivity.this, MainActivity.class);
+            Intent intent = new Intent(TCVideoPublisherActivity.this, ShortVideoMainActivity.class);
             startActivity(intent);
         } else {
             if (!TCUtils.isNetworkAvailable(this)) {
@@ -305,10 +305,10 @@ public class TCVideoPublisherActivity extends TCBaseActivity implements View.OnC
 //                    .put("location", "未知")
 //                    .put("play_url", videoURL);
             JSONObject body = new JSONObject().put("fileId", videoId)
-                    .put("token", Constant.token)
-                    .put("userId", Constant.userId)
-                    .put("userName", Constant.userName)
-                    .put("userImg", Constant.userImg)
+                    .put("token", VideoConstant.token)
+                    .put("userId", VideoConstant.userId)
+                    .put("userName", VideoConstant.userName)
+                    .put("userImg", VideoConstant.userImg)
                     .put("title", title)
                     .put("frontCover", coverURL)
                     .put("playUrl", videoURL)
@@ -339,7 +339,7 @@ public class TCVideoPublisherActivity extends TCBaseActivity implements View.OnC
                             Logger.d("上传成功了！！！~~~~");
                             EventBus.getDefault().post(TCConstants.EVENT_MSG_PUBLISH_DONE);
                             mLayoutResult.setVisibility(View.VISIBLE);
-                            Intent intent = new Intent(TCVideoPublisherActivity.this, MainActivity.class);
+                            Intent intent = new Intent(TCVideoPublisherActivity.this, ShortVideoMainActivity.class);
                             startActivity(intent);
                             finish();
                         }

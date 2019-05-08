@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.aaron.fpvideodemo.common.TCVideoEditerWrapper;
 import com.aaron.fpvideodemo.common.utils.FileUtils;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
@@ -297,8 +297,8 @@ public class TCVideoPreprocessActivity extends FragmentActivity implements
             switch (msg.what) {
                 case LOAD_VIDEO_ERROR:
                     DialogUtil.showDialog(activity,
-                            MApplication.getApplication().getResources().getString(R.string.tc_video_preprocess_activity_edit_failed),
-                            MApplication.getApplication().getResources().getString(R.string.tc_video_preprocess_activity_does_not_support_android_version_below_4_3),
+                            MyApplication.getApplication().getResources().getString(R.string.tc_video_preprocess_activity_edit_failed),
+                            MyApplication.getApplication().getResources().getString(R.string.tc_video_preprocess_activity_does_not_support_android_version_below_4_3),
                             new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

@@ -3,14 +3,14 @@ package com.aaron.fpvideodemo.videopublish;
 import android.os.Bundle;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.BaseActivity;
+import com.aaron.fpvideodemo.base.VideoBaseActivity;
 
 /**
  * 视频发布页面
  * Created by linaidao on 2019/5/5.
  */
 
-public class VideoPublishEidtorActivity extends BaseActivity {
+public class VideoPublishEidtorActivity extends VideoBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

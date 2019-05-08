@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.aaron.fpvideodemo.common.widget.BaseRecyclerAdapter;
 
 import java.util.List;
@@ -66,7 +66,7 @@ public class AddPasterAdapter extends BaseRecyclerAdapter<AddPasterAdapter.AddPa
         if (!TextUtils.isEmpty(pasterPath)) {
             holder.ivAddPaster.setImageBitmap(BitmapFactory.decodeFile(pasterPath));
         }
-        holder.tvAddPasterText.setText(MApplication.getApplication().getResources().getString(R.string.add_paster_adapter_paster)
+        holder.tvAddPasterText.setText(MyApplication.getApplication().getResources().getString(R.string.add_paster_adapter_paster)
                 + String.valueOf(position + 1));
         if (mCurrentSelectedPos == position) {
             holder.ivAddPasterTint.setVisibility(View.VISIBLE);

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.aaron.fpvideodemo.R;
 import com.aaron.fpvideodemo.base.IBaseFragment;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.common.utils.IndicatorLineUtil;
 import com.aaron.fpvideodemo.common.widget.QuickFragmentPageAdapter;
 import com.aaron.fpvideodemo.my.fragements.MActiveFragment;
@@ -71,24 +71,24 @@ public class TCUserInfoFragment extends IBaseFragment {
             }
         });
 
-        tvmyname.setText(Constant.userName);
-        tvmyid.setText("ID号：" + Constant.userId);
+        tvmyname.setText(VideoConstant.userName);
+        tvmyid.setText("ID号：" + VideoConstant.userId);
 //        civheadpic.setImageURI(Uri.parse(avatar));
-        Glide.with(this).load(Constant.userImg).error(R.mipmap.face).into(civheadpic);
+        Glide.with(this).load(VideoConstant.userImg).error(R.mipmap.face).into(civheadpic);
 
 
         List<Fragment> fragmentList = new ArrayList();
 
         MWorksFragment mWorksFragment = new MWorksFragment();
-        mWorksFragment.setUserId(Constant.userId);
+        mWorksFragment.setUserId(VideoConstant.userId);
         fragmentList.add(mWorksFragment);
 
         MActiveFragment mActiveFragment = new MActiveFragment();
-        mActiveFragment.setUserId(Constant.userId);
+        mActiveFragment.setUserId(VideoConstant.userId);
         fragmentList.add(mActiveFragment);
 
         MLikeFragment mLikeFragment = new MLikeFragment();
-        mLikeFragment.setUserId(Constant.userId);
+        mLikeFragment.setUserId(VideoConstant.userId);
         fragmentList.add(mLikeFragment);
 
         QuickFragmentPageAdapter fragmentPageAdapter = new QuickFragmentPageAdapter(getActivity().getSupportFragmentManager(),

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.telephony.PhoneStateListener;
@@ -23,7 +22,7 @@ import android.widget.Toast;
 import com.aaron.fpvideodemo.R;
 import com.aaron.fpvideodemo.base.Basebean;
 import com.aaron.fpvideodemo.base.IBaseFragment;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.common.utils.DownloadUtil;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.utils.TCUtils;
@@ -31,7 +30,7 @@ import com.aaron.fpvideodemo.login.LoginActivity;
 import com.aaron.fpvideodemo.login.TCUserMgr;
 import com.aaron.fpvideodemo.mainui.list.TCVideoInfo;
 import com.aaron.fpvideodemo.mainui.list.TCVideoListMgr;
-import com.aaron.fpvideodemo.mainui.search.SearchActivity;
+import com.aaron.fpvideodemo.mainui.search.VideoSearchActivity;
 import com.aaron.fpvideodemo.my.MyActivity;
 import com.aaron.fpvideodemo.my.like.ILikeEntry;
 import com.aaron.fpvideodemo.my.like.ILikePresenter;
@@ -728,7 +727,7 @@ public class VodPlayFragment extends IBaseFragment implements ITXVodPlayListener
                 @Override
                 public void onClick(View v) {
                     //搜索
-                    Intent m = new Intent(getActivity(), SearchActivity.class);
+                    Intent m = new Intent(getActivity(), VideoSearchActivity.class);
                     startActivity(m);
 
                 }
@@ -794,7 +793,7 @@ public class VodPlayFragment extends IBaseFragment implements ITXVodPlayListener
 
                 }
 
-            }, Constant.userId, tcLiveInfo.fileid, tcLiveInfo.userid);
+            }, VideoConstant.userId, tcLiveInfo.fileid, tcLiveInfo.userid);
 
             // 姓名
             TextView tvName = (TextView) view.findViewById(R.id.player_tv_publisher_name);

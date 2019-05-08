@@ -1,7 +1,7 @@
 package com.aaron.fpvideodemo.my.like;
 
 import com.aaron.fpvideodemo.base.Basebean;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.net.BaseNoTObserver;
 import com.aaron.fpvideodemo.net.RetrofitHttpUtil;
 
@@ -41,7 +41,7 @@ public class ILikePresenter {
                 iLikeView.showErr("获取列表失败");
             }
 
-        }, userId, page, Constant.PIGE_SIZE, keyWords);
+        }, userId, page, VideoConstant.PIGE_SIZE, keyWords);
 
     }
 
@@ -64,7 +64,7 @@ public class ILikePresenter {
 //                iLikeView.showErr(type == 1 ? "点赞失败" : "点赞成功");
             }
 
-        }, Constant.userId, type, fileId);
+        }, VideoConstant.userId, type, fileId);
 
     }
 
@@ -85,7 +85,7 @@ public class ILikePresenter {
                 iLikeView.showErr(message);
             }
 
-        }, type, Constant.userId, likeUserId, likeUserImg, likeUserName);
+        }, type, VideoConstant.userId, likeUserId, likeUserImg, likeUserName);
 
     }
 

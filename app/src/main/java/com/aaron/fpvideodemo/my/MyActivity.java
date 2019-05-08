@@ -1,41 +1,33 @@
 package com.aaron.fpvideodemo.my;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.BaseActivity;
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.base.VideoBaseActivity;
 import com.aaron.fpvideodemo.common.utils.IndicatorLineUtil;
 import com.aaron.fpvideodemo.common.widget.QuickFragmentPageAdapter;
-import com.aaron.fpvideodemo.mainui.play.TCVodPlayerActivity;
-import com.aaron.fpvideodemo.my.fragements.MActiveFragment;
 import com.aaron.fpvideodemo.my.fragements.MLikeFragment;
 import com.aaron.fpvideodemo.my.fragements.MWorksFragment;
 import com.aaron.fpvideodemo.my.like.ILikeEntry;
 import com.aaron.fpvideodemo.my.like.ILikePresenter;
 import com.aaron.fpvideodemo.my.like.ILikeView;
 import com.bumptech.glide.Glide;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * 我的
  * Created by linaidao on 2019/4/28.
  */
 
-public class MyActivity extends BaseActivity implements ILikeView {
+public class MyActivity extends VideoBaseActivity implements ILikeView {
 
     private android.widget.ImageView ivheapbg;
     private android.widget.ImageView ivback;

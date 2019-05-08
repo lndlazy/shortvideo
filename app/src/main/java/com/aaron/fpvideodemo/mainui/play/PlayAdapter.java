@@ -21,7 +21,7 @@
 //import com.aaron.fpvideodemo.common.utils.TCUtils;
 //import com.aaron.fpvideodemo.login.TCUserMgr;
 //import com.aaron.fpvideodemo.mainui.list.TCVideoInfo;
-//import com.aaron.fpvideodemo.mainui.search.SearchActivity;
+//import com.aaron.fpvideodemo.mainui.search.VideoSearchActivity;
 //import com.aaron.fpvideodemo.my.MyActivity;
 //import com.aaron.fpvideodemo.net.BaseNoTObserver;
 //import com.aaron.fpvideodemo.net.RetrofitHttpUtil;
@@ -220,7 +220,7 @@
 //            @Override
 //            public void onClick(View v) {
 //                //搜索
-//                Intent m = new Intent(context, SearchActivity.class);
+//                Intent m = new Intent(context, VideoSearchActivity.class);
 //                context.startActivity(m);
 //
 //            }

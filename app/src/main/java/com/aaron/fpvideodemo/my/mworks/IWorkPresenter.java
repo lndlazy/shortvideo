@@ -1,15 +1,8 @@
 package com.aaron.fpvideodemo.my.mworks;
 
-import com.aaron.fpvideodemo.base.Basebean;
-import com.aaron.fpvideodemo.common.Constant;
-import com.aaron.fpvideodemo.login.TCUserMgr;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.net.BaseNoTObserver;
 import com.aaron.fpvideodemo.net.RetrofitHttpUtil;
-import com.orhanobut.logger.Logger;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Created by linaidao on 2019/5/4.
@@ -42,12 +35,12 @@ public class IWorkPresenter {
 
                 }
 
-            }, userId, page, Constant.PIGE_SIZE, keyWord);
+            }, userId, page, VideoConstant.PIGE_SIZE, keyWord);
 
 
-//            JSONObject body = new JSONObject().put("userId", Constant.userId)
+//            JSONObject body = new JSONObject().put("userId", VideoConstant.userId)
 //                    .put("page", page)
-//                    .put("size", Constant.PIGE_SIZE)
+//                    .put("size", VideoConstant.PIGE_SIZE)
 //                    .put("keyWord", "");
 //            TCUserMgr.getInstance().request("/myUgcList", body, new TCUserMgr.HttpCallback("my_ugc_list", new TCUserMgr.Callback() {
 //                @Override

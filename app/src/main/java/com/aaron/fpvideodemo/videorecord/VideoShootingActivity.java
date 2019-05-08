@@ -45,7 +45,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.BaseActivity;
+import com.aaron.fpvideodemo.base.VideoBaseActivity;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.widget.BeautySettingPannel;
 import com.aaron.fpvideodemo.login.TCUserMgr;
@@ -93,7 +93,7 @@ import static android.view.View.GONE;
  * Created by linaidao on 2019/4/29.
  */
 
-public class VideoShootingActivity extends BaseActivity implements View.OnClickListener, BeautySettingPannel.IOnBeautyParamsChangeListener
+public class VideoShootingActivity extends VideoBaseActivity implements View.OnClickListener, BeautySettingPannel.IOnBeautyParamsChangeListener
         , TXRecordCommon.ITXVideoRecordListener, View.OnTouchListener, GestureDetector.OnGestureListener, ScaleGestureDetector.OnScaleGestureListener
         , TXVideoJoiner.TXVideoJoinerListener {
 

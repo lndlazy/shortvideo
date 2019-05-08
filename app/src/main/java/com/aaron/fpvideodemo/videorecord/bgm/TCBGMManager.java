@@ -3,7 +3,7 @@ package com.aaron.fpvideodemo.videorecord.bgm;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.utils.TCHttpEngine;
 import com.aaron.fpvideodemo.videorecord.bgm.utils.TCBGMDownloadProgress;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class TCBGMManager {
     private static final String TAG = "TCBgmManager";
     private boolean isLoading;
-    private SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(MApplication.getApplication());
+    private SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(MyApplication.getApplication());
     private LoadBgmListener mLoadBgmListener;
 
     private static class TCBgmMgrHolder {

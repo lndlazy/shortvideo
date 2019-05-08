@@ -34,7 +34,7 @@ import com.aaron.fpvideodemo.common.utils.FileUtils;
 import com.aaron.fpvideodemo.common.utils.TCConstants;
 import com.aaron.fpvideodemo.common.widget.VideoWorkProgressFragment;
 import com.aaron.fpvideodemo.login.TCUserMgr;
-import com.aaron.fpvideodemo.mainui.MainActivity;
+import com.aaron.fpvideodemo.mainui.ShortVideoMainActivity;
 import com.aaron.fpvideodemo.videoeditor.bubble.TCBubbleViewInfoManager;
 import com.aaron.fpvideodemo.videoeditor.common.ActionSheetDialog;
 import com.aaron.fpvideodemo.videoeditor.common.time.TCTimeViewInfoManager;
@@ -371,7 +371,7 @@ public class TCVideoEditerActivity extends FragmentActivity implements
         } else {
             mLayoutResult.setVisibility(View.VISIBLE);
             saveVideoToDCIM();
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, ShortVideoMainActivity.class);
             startActivity(intent);
             // 通知录制界面销毁
 //            EventBus.getDefault().post(TCConstants.EVENT_MSG_SAVE_DONE);
@@ -498,7 +498,7 @@ public class TCVideoEditerActivity extends FragmentActivity implements
                 startActivityForResult(intent, TCConstants.ACTIVITY_OTHER_REQUEST_CODE);
                 break;
             case R.id.layout_publish_success:
-                intent = new Intent(this, MainActivity.class);
+                intent = new Intent(this, ShortVideoMainActivity.class);
                 startActivity(intent);
                 clearConfig();
                 finish();

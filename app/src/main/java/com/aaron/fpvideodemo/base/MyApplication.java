@@ -1,6 +1,5 @@
 package com.aaron.fpvideodemo.base;
 
-import android.app.Application;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
@@ -16,7 +15,7 @@ import com.tencent.rtmp.TXLiveConstants;
  * Created by linaidao on 2019/4/26.
  */
 
-public class MApplication extends MultiDexApplication {
+public class MyApplication extends MultiDexApplication {
 
     private static final String TAG = "FPVIDEO";
 
@@ -26,7 +25,7 @@ public class MApplication extends MultiDexApplication {
     //您从控制台申请的licence key
     String ugcKey = "b6098babf2c5ed4c3671d45b556c6237";
 
-    private static MApplication instance;
+    private static MyApplication instance;
 
 
     @Override
@@ -50,7 +49,7 @@ public class MApplication extends MultiDexApplication {
     }
 
 
-    public static MApplication getApplication() {
+    public static MyApplication getApplication() {
         return instance;
     }
 

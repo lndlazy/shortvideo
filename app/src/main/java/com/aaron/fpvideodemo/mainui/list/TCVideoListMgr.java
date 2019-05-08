@@ -1,7 +1,7 @@
 package com.aaron.fpvideodemo.mainui.list;
 
 
-import com.aaron.fpvideodemo.common.Constant;
+import com.aaron.fpvideodemo.common.VideoConstant;
 import com.aaron.fpvideodemo.login.TCUserMgr;
 import com.orhanobut.logger.Logger;
 
@@ -51,7 +51,7 @@ public class TCVideoListMgr {
     private void fetchVideoList(String cmd, int type,String keyWord, final Listener listener) {
         try {
             String str = String.valueOf(mIndex);
-            JSONObject body = new JSONObject().put("type", type).put("page", 1).put("size", Constant.PIGE_SIZE)
+            JSONObject body = new JSONObject().put("type", type).put("page", 1).put("size", VideoConstant.PIGE_SIZE)
                     .put("keyWord", keyWord);
             TCUserMgr.getInstance().request("/" + cmd, body, new TCUserMgr.HttpCallback(cmd, new TCUserMgr.Callback() {
                 @Override

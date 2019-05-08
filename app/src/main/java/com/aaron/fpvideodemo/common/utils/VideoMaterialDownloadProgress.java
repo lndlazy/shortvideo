@@ -5,7 +5,7 @@ import android.os.Build;
 import android.text.TextUtils;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 
 import java.io.File;
 import java.util.concurrent.Executors;
@@ -57,7 +57,7 @@ public class VideoMaterialDownloadProgress {
 
                 String dataDir = VideoUtil.unZip(file.getPath(), file.getParentFile().getPath());
                 if (TextUtils.isEmpty(dataDir)) {
-                    mListener.onDownloadFail(MApplication.getApplication().getString(R.string.video_material_download_progress_material_unzip_failed));
+                    mListener.onDownloadFail(MyApplication.getApplication().getString(R.string.video_material_download_progress_material_unzip_failed));
                     stop();
                     return;
                 }
@@ -68,7 +68,7 @@ public class VideoMaterialDownloadProgress {
 
             @Override
             public void onSaveFailed(File file, Exception e) {
-                mListener.onDownloadFail(MApplication.getApplication().getString(R.string.video_material_download_progress_download_failed));
+                mListener.onDownloadFail(MyApplication.getApplication().getString(R.string.video_material_download_progress_download_failed));
                 stop();
             }
 
@@ -85,7 +85,7 @@ public class VideoMaterialDownloadProgress {
         };
         File onlineMaterialDir = VideoDeviceUtil.getExternalFilesDir(VideoUtil.getContext(), ONLINE_MATERIAL_FOLDER);
         if (onlineMaterialDir == null || onlineMaterialDir.getName().startsWith("null")) {
-            mListener.onDownloadFail(MApplication.getApplication().getString(R.string.video_material_download_progress_no_enough_storage_space));
+            mListener.onDownloadFail(MyApplication.getApplication().getString(R.string.video_material_download_progress_no_enough_storage_space));
             stop();
             return;
         }

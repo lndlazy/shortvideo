@@ -27,7 +27,7 @@ import com.aaron.fpvideodemo.login.LoginActivity;
 import com.aaron.fpvideodemo.login.TCUserMgr;
 import com.aaron.fpvideodemo.mainui.list.TCLiveListFragment;
 import com.aaron.fpvideodemo.mainui.list.TCVideoInfo;
-import com.aaron.fpvideodemo.mainui.search.SearchActivity;
+import com.aaron.fpvideodemo.mainui.search.VideoSearchActivity;
 import com.aaron.fpvideodemo.my.MyActivity;
 import com.aaron.fpvideodemo.videorecord.VideoShootingActivity;
 import com.bumptech.glide.Glide;
@@ -616,7 +616,7 @@ public class TCVodPlayerActivity extends TCBaseActivity implements ITXVodPlayLis
                 @Override
                 public void onClick(View v) {
                     //搜索
-                    Intent m = new Intent(TCVodPlayerActivity.this, SearchActivity.class);
+                    Intent m = new Intent(TCVodPlayerActivity.this, VideoSearchActivity.class);
                     startActivity(m);
 
                 }

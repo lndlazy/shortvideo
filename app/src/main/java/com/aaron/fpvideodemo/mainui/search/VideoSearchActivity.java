@@ -3,13 +3,12 @@ package com.aaron.fpvideodemo.mainui.search;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.BaseActivity;
+import com.aaron.fpvideodemo.base.VideoBaseActivity;
 import com.aaron.fpvideodemo.common.utils.IndicatorLineUtil;
 import com.aaron.fpvideodemo.common.widget.QuickFragmentPageAdapter;
 import com.orhanobut.logger.Logger;
@@ -22,7 +21,7 @@ import java.util.List;
  * Created by linaidao on 2019/4/28.
  */
 
-public class SearchActivity extends BaseActivity {
+public class VideoSearchActivity extends VideoBaseActivity {
 
     private TabLayout tblayout;
     private ViewPager vp_content;

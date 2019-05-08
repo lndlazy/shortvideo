@@ -4,7 +4,7 @@ package com.aaron.fpvideodemo.common;
  * Created by linaidao on 2019/4/28.
  */
 
-public class Constant {
+public class VideoConstant {
 
 
     public static final int PIGE_SIZE = 20;

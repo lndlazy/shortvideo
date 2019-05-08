@@ -34,9 +34,9 @@ import com.tencent.liteav.basic.log.TXCLog;
 
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+public class ShortVideoMainActivity extends FragmentActivity implements View.OnClickListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ShortVideoMainActivity";
     private long mLastClickPubTS = 0;
 
     private TextView mBtnVideo, mBtnUser;
@@ -55,7 +55,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_short_video_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -129,7 +129,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
                             //TODO 重新编辑
-//                            startActivity(new Intent(MainActivity.this, TCVideoRecordActivity.class));
+//                            startActivity(new Intent(ShortVideoMainActivity.this, TCVideoRecordActivity.class));
                         }
                     })
                     .setNegativeButton(getString(R.string.btn_cancel), new DialogInterface.OnClickListener() {
@@ -252,7 +252,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         startActivity(m);
 
 //        if (!TCUserMgr.getInstance().hasUser()) {
-//            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//            Intent intent = new Intent(ShortVideoMainActivity.this, LoginActivity.class);
 //            startActivity(intent);
 //        } else {
 //            // 防止多次点击

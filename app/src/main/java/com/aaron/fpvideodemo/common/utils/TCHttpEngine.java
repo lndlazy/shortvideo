@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.aaron.fpvideodemo.R;
 
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkError;
@@ -93,13 +93,13 @@ public class TCHttpEngine {
 
     public static String getErrorMessage(Object error) {
         if (error instanceof TimeoutError) {
-            return MApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_connect_server_failed);
+            return MyApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_connect_server_failed);
         } else if (isServerProblem(error)) {
             return handleServerError(error);
         } else if (isNetworkProblem(error)) {
-            return MApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_no_network_connection);
+            return MyApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_no_network_connection);
         }
-        return MApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_network_anomaly);
+        return MyApplication.getApplication().getResources().getString(R.string.tc_http_engine_get_error_message_network_anomaly);
     }
 
     private static boolean isNetworkProblem(Object error) {
@@ -142,10 +142,10 @@ public class TCHttpEngine {
                     return error.getMessage();
 
                 default:
-                    return MApplication.getApplication().getResources().getString(R.string.tc_http_engine_handle_server_error_connect_server_fail);
+                    return MyApplication.getApplication().getResources().getString(R.string.tc_http_engine_handle_server_error_connect_server_fail);
             }
         }
-        return MApplication.getApplication().getResources().getString(R.string.tc_http_engine_handle_server_error_network_anomaly);
+        return MyApplication.getApplication().getResources().getString(R.string.tc_http_engine_handle_server_error_network_anomaly);
     }
 
     public interface Listener {

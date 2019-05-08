@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 
 import com.aaron.fpvideodemo.R;
-import com.aaron.fpvideodemo.base.MApplication;
+import com.aaron.fpvideodemo.base.MyApplication;
 import com.aaron.fpvideodemo.common.utils.HttpFileListener;
 import com.aaron.fpvideodemo.common.utils.HttpFileUtil;
 import com.aaron.fpvideodemo.common.utils.VideoDeviceUtil;
@@ -70,9 +70,9 @@ public class TCBGMDownloadProgress {
             }
 
         };
-        File onlineMaterialDir = VideoDeviceUtil.getExternalFilesDir(MApplication.getApplication(), BGM_FOLDER);
+        File onlineMaterialDir = VideoDeviceUtil.getExternalFilesDir(MyApplication.getApplication(), BGM_FOLDER);
         if (onlineMaterialDir == null || onlineMaterialDir.getName().startsWith("null")) {
-            mListener.onDownloadFail(MApplication.getApplication().getResources().getString(R.string.tc_bgm_download_progress_no_enough_storage_space));
+            mListener.onDownloadFail(MyApplication.getApplication().getResources().getString(R.string.tc_bgm_download_progress_no_enough_storage_space));
             stop();
             return;
         }

@@ -23,12 +23,12 @@ import com.aaron.fpvideodemo.R;
  * Created by Aaron on 17/3/21.
  */
 @SuppressLint("Registered")
-public class BaseActivity extends FragmentActivity implements BaseView {
+public class VideoBaseActivity extends FragmentActivity implements BaseView {
 
 //    protected SharedPreferences sp;
     protected ProgressDialog showDialog;
     protected Bundle bundle;
-    protected MApplication mapplication;
+    protected MyApplication mapplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class BaseActivity extends FragmentActivity implements BaseView {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 //        sp = getSharedPreferences(SaveUtils.CONFIG, MODE_PRIVATE);
         bundle = getIntent().getBundleExtra("bundle");
-        mapplication = (MApplication) getApplication();
+        mapplication = (MyApplication) getApplication();
 
 //        BaseActivityPermissionsDispatcher.needPermissionWithPermissionCheck(this);
 
